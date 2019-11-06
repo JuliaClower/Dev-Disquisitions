@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const { festivityRouter } = require('./controllers/festivity.js')
+const { articleRouter } = require('./controllers/article.js')
 
 
 /* Step 3
@@ -34,7 +34,7 @@ app.use(express.static(`${__dirname}/client/build`))
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/api/festivity', festivityRouter)
+app.use('/api/article', articleRouter)
 
 /* Step 5
  *
