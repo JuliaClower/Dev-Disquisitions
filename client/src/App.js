@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import HelloWorld from './components/HelloWorld.js'
+import Articles from './components/Articles.js'
+import Article from './components/Article.js'
 import NavBar from './components/NavBar.js'
 import './App.css';
 
@@ -9,10 +10,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <Router>
+        <NavBar />
         <Switch>
-          <Route exact path="/" component={HelloWorld}/>
+          <Route exact path="/" component={Articles}/>
+          <Route path="/articles/:articleId" component={Article}/>
         </Switch>
       </Router>
     </div>

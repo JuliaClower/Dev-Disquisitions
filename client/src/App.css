@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+.nav-bar {
+  background: #282c34; 
+  color: white; 
+  display: flex; 
+  flex-direction: column;  
+  width: 200px; 
+  /* 6 lines below from: https://stackoverflow.com/questions/712689/css-div-stretch-100-page-height */
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+}

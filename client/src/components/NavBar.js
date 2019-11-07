@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 
 const languages = [
     {
@@ -22,7 +24,7 @@ const languages = [
         name: "JavaScript",
         topics: [
             {
-            topicName: "For Loops",
+                topicName: "For Loops",
             },
         ]
     }
@@ -30,21 +32,21 @@ const languages = [
 
 export default class NavBar extends Component {
     render() {
-        const allLanguages = languages.map((languages, index) =>  {
+        const allLanguages = languages.map((languages, index) => {
             return (
                 <div>
                     <p key={index}>{languages.name}</p>
                     {
                         languages.topics.map((topic) => {
-                        return (<div>{topic.topicName}</div>)
-                    })
+                            return (<Link style={{ textDecoration: 'none', color: 'white' }} to={`/${topic._id}`}><div>{topic.topicName}</div></Link>)
+                        })
                     }
                 </div>
             )
         })
- 
-        return(
-            <div>
+
+        return (
+            <div className="nav-bar">
                 <h1>ThisTheNavBar</h1>
                 {allLanguages}
             </div>
