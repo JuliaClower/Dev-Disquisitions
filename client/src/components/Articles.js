@@ -23,6 +23,9 @@ export default class Articles extends Component {
         return (
             <div>
                 <h1>ARTICLES</h1>
+                <div>
+                    <Link to={`/createNew`}><button>CreateNew</button></Link>
+                </div>
                 {allArticles}
             </div>
         )
