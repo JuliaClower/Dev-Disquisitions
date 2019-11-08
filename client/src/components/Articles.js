@@ -63,8 +63,8 @@ export default class Articles extends Component {
         })
         return (
             <div>
-                <h1>ARTICLES</h1>
-                <select onChange={this.onLanguageChange}>
+                <h1>DevDisquisitions</h1>
+                <select className="displaySelection" onChange={this.onLanguageChange}>
                     <option value="all">All</option>
                     <option value="JAVA">JAVA</option>
                     <option value="javascript">Javascript</option>
@@ -74,8 +74,8 @@ export default class Articles extends Component {
                     <option value="C#">C#</option>
                     <option value="Ruby">Ruby</option>
                 </select>
-                <select onChange={this.onTopicChange}>
-                    <option value="All">All</option>
+                <select className="displaySelection" onChange={this.onTopicChange}>
+                    <option value="all">All</option>
                     <option value="Basics">Basics</option>
                     <option value="Loops">Loops</option>
                     <option value="Classes/Objects">Classes/Objects</option>

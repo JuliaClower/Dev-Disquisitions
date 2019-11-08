@@ -31,3 +31,10 @@
     transform: rotate(360deg);
   }
 }
+h1 {
+  font-family: 'Fira Code', monospace;
+  font-size: 40px;
+}
+.displaySelection {
+  width: 300px; 
+}
