@@ -1,29 +1,28 @@
 const languages = [
     {
-        name: "CSS",
-        topics: [
-            {
-                topicName: "FlexBox"
-            },
-            {
-                topicName: "Grid"
-            },
-            {
-                topicName: "Float"
-            },
-            {
-                topicName: "Forms"
-            }
-        ]
+        name: "All",
+    },
+    {
+        name: "JAVA",
     },
     {
         name: "JavaScript",
-        topics: [
-            {
-                topicName: "For Loops",
-            },
-        ]
-    }
+    },
+    {
+        name: "Python",
+    },
+    {
+        name: "C/CPP",
+    },
+    {
+        name: "PHP",
+    },    
+    {
+        name: "C#",
+    },
+    {
+        name: "Ruby",
+    },
 ]
 
 export default languages

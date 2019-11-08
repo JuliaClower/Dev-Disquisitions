@@ -50,8 +50,12 @@ export default class Articles extends Component {
                 <select onChange={this.onLanguageChange}>
                     <option value="all">All</option>
                     <option value="JAVA">JAVA</option>
-                    <option value="javascript">javascript</option>
-                    <option 
+                    <option value="javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="C/CPP">C/CPP</option>
+                    <option value="PHP">PHP</option>
+                    <option value="C#">C#</option>
+                    <option value="Ruby">Ruby</option>
                 </select>
                 <div>
                     <Link to={`/createNew`}><button>CreateNew</button></Link>
