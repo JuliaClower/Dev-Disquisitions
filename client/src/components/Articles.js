@@ -36,11 +36,28 @@ export default class Articles extends Component {
 
             })
     }
+    onTopicChange = (event) => {
+        const newTopic = event.target.value
+        console.log('newTopic', newTopic)
+
+        axios.get('api/article')
+            .then((res) => {
+                const allArticles = res.data
+                if (newTopic === 'all') {
+                    this.setState({ articleList: allArticles })
+                } else {
+                    const filteredTopicList = allArticles.filter((article) => {
+                        return article.topic === newTopic
+                    })
+                    this.setState({ articleList: filteredTopicList })
+                }
+            })
+    }
     render() {
         const allArticles = this.state.articleList.map((article) => {
             return (
                 <div>
-                    <Link to={`/articles/${article._id}`}><h2>{article.name}</h2></Link>
+                    <Link to={`/article/${article._id}`}><h2>{article.name}</h2></Link>
                 </div>
             )
         })
@@ -56,6 +73,14 @@ export default class Articles extends Component {
                     <option value="PHP">PHP</option>
                     <option value="C#">C#</option>
                     <option value="Ruby">Ruby</option>
+                </select>
+                <select onChange={this.onTopicChange}>
+                    <option value="All">All</option>
+                    <option value="Basics">Basics</option>
+                    <option value="Loops">Loops</option>
+                    <option value="Classes/Objects">Classes/Objects</option>
+                    <option value="Arrays">Arrays</option>
+                    <option value="Functions">Functions</option>
                 </select>
                 <div>
                     <Link to={`/createNew`}><button>CreateNew</button></Link>

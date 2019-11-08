@@ -5,10 +5,10 @@ import axios from 'axios'
 export default class CreateNew extends Component {
     state = {
         newArticle: {
-            name: '', 
-            link: '',  
-            language: '', 
-            topic: '', 
+            name: '',
+            link: '',
+            language: '',
+            topic: '',
             picture: ''
         }
     }
@@ -50,20 +50,25 @@ export default class CreateNew extends Component {
                             />
                         </div>
                         <div>
-                            <select name="language" value={this.state.newArticle.link} onChange={this.handleNewArticleChange}>
-                                <option value="Javascript">Javascript</option>
-                                <option value="CSS">CSS</option>
-                                <option value="HTML">HTML</option>
+                            <select name="language" value={this.state.newArticle.language} onChange={this.handleNewArticleChange}>
+                                    <option value="all">All</option>
+                                    <option value="JAVA">JAVA</option>
+                                    <option value="javascript">Javascript</option>
+                                    <option value="Python">Python</option>
+                                    <option value="C/CPP">C/CPP</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="C#">C#</option>
+                                    <option value="Ruby">Ruby</option>
                             </select>
                         </div>
                         <div>
-                            <input
-                                name="topic"
-                                type="text"
-                                placeholder="topic name"
-                                value={this.state.newArticle.topic}
-                                onChange={this.handleNewArticleChange}
-                            />
+                            <select name="topic" value={this.state.newArticle.topic} onChange={this.handleNewArticleChange}>
+                                <option value="Basics">Basics</option>
+                                <option value="Loops">Loops</option>
+                                <option value="Classes/Objects">Classes/Objects</option>
+                                <option value="Arrays">Arrays</option>
+                                <option value="Functions">Functions</option>
+                            </select>
                         </div>
                         <div>
                             <input
