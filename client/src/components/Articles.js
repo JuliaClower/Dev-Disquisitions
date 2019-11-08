@@ -4,13 +4,37 @@ import { Link } from 'react-router-dom'
 
 export default class Articles extends Component {
     state = {
+        topic: '',
         articleList: []
     }
     componentDidMount = () => {
+        this.getAllArticles()
+    }
+
+    getAllArticles = () => {
         axios.get('/api/article')
-        .then((res) => {
-            this.setState({ articleList: res.data })
-        })
+            .then((res) => {
+                console.log('articleList', res.data)
+                this.setState({ articleList: res.data })
+            })
+    }
+    onLanguageChange = (event) => {
+        const newLanguage = event.target.value
+        console.log('newLanguage', newLanguage)
+
+        axios.get('/api/article')
+            .then((res) => {
+                const allArticles = res.data
+                if (newLanguage === 'all') {
+                    this.setState({ articleList: allArticles })
+                } else {
+                    const filteredList = allArticles.filter((article) => {
+                        return article.language === newLanguage
+                    })
+                    this.setState({ articleList: filteredList })
+                }
+
+            })
     }
     render() {
         const allArticles = this.state.articleList.map((article) => {
@@ -23,6 +47,12 @@ export default class Articles extends Component {
         return (
             <div>
                 <h1>ARTICLES</h1>
+                <select onChange={this.onLanguageChange}>
+                    <option value="all">All</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="javascript">javascript</option>
+                    <option 
+                </select>
                 <div>
                     <Link to={`/createNew`}><button>CreateNew</button></Link>
                 </div>

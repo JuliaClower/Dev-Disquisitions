@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class Article extends Component {
     state = {
@@ -28,7 +29,9 @@ export default class Article extends Component {
             <div>
                 <h1>{this.state.article.name}</h1>
                 <button onClick={this.articleDeleteClick}>Delete</button>
+                <Link to={`/`}><button>BackHome</button></Link>
             </div>
+
         )
     }
 }
