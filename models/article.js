@@ -4,7 +4,7 @@ const ArticleSchema = new mongoose.Schema({
   link: String,  
   language: String, 
   topic: String, 
-  picture: String
+  description: String
 })
 
 const ArticleCollection = mongoose.model('Article', ArticleSchema)

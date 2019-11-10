@@ -9,7 +9,7 @@ export default class CreateNew extends Component {
             link: '',
             language: '',
             topic: '',
-            picture: ''
+            description: ''
         }
     }
     handleNewArticleChange = (event) => {
@@ -72,10 +72,10 @@ export default class CreateNew extends Component {
                         </div>
                         <div>
                             <input
-                                name="picture"
+                                name="description"
                                 type="text"
-                                placeholder="image URL"
-                                value={this.state.newArticle.picture}
+                                placeholder="Describe why this was helpful"
+                                value={this.state.newArticle.description}
                                 onChange={this.handleNewArticleChange}
                             />
                         </div>

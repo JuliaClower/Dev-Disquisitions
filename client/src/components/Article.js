@@ -28,6 +28,9 @@ export default class Article extends Component {
         return (
             <div>
                 <h1>{this.state.article.name}</h1>
+                <h2>Language: {this.state.article.language}</h2>
+                <h3>Topic: {this.state.article.topic}</h3>
+                <p>{this.state.article.description}</p>
                 <button onClick={this.articleDeleteClick}>Delete</button>
                 <Link to={`/`}><button>BackHome</button></Link>
             </div>

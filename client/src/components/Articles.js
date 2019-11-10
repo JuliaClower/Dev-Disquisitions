@@ -18,6 +18,9 @@ export default class Articles extends Component {
                 this.setState({ articleList: res.data })
             })
     }
+    generateLanguageList = function (data) {
+        return <option>(data)</option>
+    }
     onLanguageChange = (event) => {
         const newLanguage = event.target.value
         console.log('newLanguage', newLanguage)
@@ -33,7 +36,6 @@ export default class Articles extends Component {
                     })
                     this.setState({ articleList: filteredList })
                 }
-
             })
     }
     onTopicChange = (event) => {
@@ -63,16 +65,16 @@ export default class Articles extends Component {
         })
         return (
             <div>
-                <h1>DevDisquisitions</h1>
+                <h1 class="mainHeading">DevDisquisitions</h1>
                 <select className="displaySelection" onChange={this.onLanguageChange}>
-                    <option value="all">All</option>
-                    <option value="JAVA">JAVA</option>
-                    <option value="javascript">Javascript</option>
-                    <option value="Python">Python</option>
-                    <option value="C/CPP">C/CPP</option>
-                    <option value="PHP">PHP</option>
-                    <option value="C#">C#</option>
-                    <option value="Ruby">Ruby</option>
+                        <option value="all">All</option>
+                        <option value="JAVA">JAVA</option>
+                        <option value="javascript">Javascript</option>
+                        <option value="Python">Python</option>
+                        <option value="C/CPP">C/CPP</option>
+                        <option value="PHP">PHP</option>
+                        <option value="C#">C#</option>
+                        <option value="Ruby">Ruby</option>
                 </select>
                 <select className="displaySelection" onChange={this.onTopicChange}>
                     <option value="all">All</option>
