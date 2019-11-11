@@ -1,28 +1,44 @@
 const languages = [
     {
-        name: "All",
+        id: '1',
+        displayName: "All",
+        value: 'all'
     },
     {
-        name: "JAVA",
+        id: '2',
+        displayName: "JAVA",
+        value: 'java'
     },
     {
-        name: "JavaScript",
+        id: '3',
+        displayName: "JavaScript",
+        value: 'Javascript'
     },
     {
-        name: "Python",
+        id: '4',
+        displayName: "Python",
+        value: 'python'
     },
     {
-        name: "C/CPP",
+        id: '5',
+        displayName: "C/CPP",
+        value: 'c/cpp'
     },
     {
-        name: "PHP",
+        id: '6',
+        displayName: "PHP",
+        value: 'php'
     },    
     {
-        name: "C#",
+        id: '7',
+        displayName: "C#",
+        value: 'c#'
     },
     {
-        name: "Ruby",
+        id: '8',
+        displayName: "Ruby",
+        value: 'ruby'
     },
-]
+];
 
-export default languages
+export default languages;

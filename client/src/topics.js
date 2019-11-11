@@ -1,17 +1,29 @@
 const topics = [
     {
-        name: 'Basics'
+        id: '0',
+        displayName: "All",
+        value: 'all'
     },
     {
-        name: 'Loops'
+        id: '1',
+        displayName: 'Basics'
     },
     {
-        name: 'Classes/Objects'
+        id: '2',
+        displayName: 'Loops'
     },
     {
-        name: 'Arrays'
+        id: '3',
+        displayName: 'Classes/Objects'
     },
     {
-        name: 'Functions'
+        id: '4',
+        displayName: 'Arrays'
+    },
+    {
+        id: '5',
+        displayName: 'Functions'
     },
 ]
+
+export default topics
