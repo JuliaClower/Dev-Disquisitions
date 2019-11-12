@@ -1,22 +1,30 @@
 .App {
   text-align: center;
 }
-html {
-  background-color: #c5c3d3;
-}
 h1 {
   font-family: 'Fira Code', monospace;
   font-size: 40px;
-}
-.mainHeading {
-  letter-spacing: 5px;
-  height: 150px; 
   margin: 0; 
-  background-color: #f6f6f8;
+}
+p {
+  text-align: left;
+  margin: 0;
+  height: 50px; 
+}
+.welcome-line {
+  line-height: 80px;
+  margin-left: 400px;
+}
+.description-line-heading {
+  line-height: 20px;
   text-align: center;
-  vertical-align: middle;
-  line-height: 150px;
-  color: #b6b3c4;
+}
+.main-box {
+  margin: 0;
+  height: 150px; 
+  letter-spacing: 4px; 
+  border-bottom: 3px solid black; 
+
 }
 .articles-display {
   display: flex;
