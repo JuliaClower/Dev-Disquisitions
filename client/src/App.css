@@ -76,6 +76,9 @@ p {
   border: 3px solid black;
   margin: 20px;
   border-radius: 4%;
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
+  box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
 }
 .create-new-form-div {
   margin: auto;
@@ -89,8 +92,8 @@ p {
   width: 400px; 
   height: 600px;
   -webkit-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
--moz-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
+  box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
 }
 input, select {
   width: 380px; 
