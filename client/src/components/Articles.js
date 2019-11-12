@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import languages from './languages';
 import topics from '../topics';
@@ -84,12 +85,12 @@ export default class Articles extends Component {
 
   render() {
     const filteredArticleList = this.state.filteredArticleList.map((article) => {
-      // const style = {
-      //   backgroundColor: 'teal'
-      // }
       return (
         <div className="individual-article-in-the-list" key={article._id}>
-          <Link to={`/article/${article._id}`}><h2>{article.name}</h2></Link>
+          <NavLink to={`/article/${article._id}`} className="navLink"><h2>{article.name}</h2></NavLink>
+          <div description-in-the-individual-article-list>
+            <p>{article.description}</p>
+          </div>
         </div>
       )
     })

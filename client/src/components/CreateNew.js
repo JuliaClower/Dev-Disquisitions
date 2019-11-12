@@ -78,7 +78,7 @@ export default class CreateNew extends Component {
                         </div>
                         <div>
 													<p className="form-p">What was useful about this article?</p>
-														<textarea 
+														<textarea className="description-box"
 															rows="5" 
 															cols="60" 
 															name="description" 

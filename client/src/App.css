@@ -71,14 +71,11 @@ p {
   border-radius: 4px;
 }
 .individual-article-in-the-list { 
-  height: 200px; 
-  width: 200px; 
+  height: 100px; 
+  width: 400px; 
   border: 3px solid black;
   margin: 20px;
-  border-radius: 4%;
-  -webkit-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
-  -moz-box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
-  box-shadow: 3px 5px 5px 0px rgba(79,179,179,1);
+  border-radius: 10px;
 }
 .create-new-form-div {
   margin: auto;
@@ -121,6 +118,10 @@ input, select {
 .navLink {
   text-decoration: none;
   color: rgba(79,179,179,1);
+}
+.description-box {
+  overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 
 
