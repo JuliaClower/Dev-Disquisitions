@@ -88,7 +88,7 @@ export default class Articles extends Component {
       return (
         <div className="individual-article-in-the-list" key={article._id}>
           <NavLink to={`/article/${article._id}`} className="navLink"><h2>{article.name}</h2></NavLink>
-          <div description-in-the-individual-article-list>
+          <div className='description-in-the-individual-article-list'>
             <p>{article.description}</p>
           </div>
         </div>
