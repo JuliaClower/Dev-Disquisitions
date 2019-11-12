@@ -24,13 +24,13 @@ p {
   height: 200px; 
   letter-spacing: 4px; 
   border-bottom: 3px solid black; 
-  background-image: url("./succulent2.png");
+  background-image: url("./vippng.com-small-plant-png-234720.png");
   background-repeat: no-repeat;
-  background-position: 140vh;
-  background-size: 400px;
+  background-size: 100px;
+  background-position: 80vw;
 }
 .articles-display {
-  border-top: 3px dotted green;
+  border-top: 3px solid teal;
   display: flex;
   flex-direction: row;
 }
