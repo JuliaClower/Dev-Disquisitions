@@ -63,34 +63,6 @@ export default class Articles extends Component {
 
     this.setState({ filteredArticleList });
 
-
-    // const pureArticlesCopy = [...this.state.pureArticleList];
-    // let filteredArticleList = pureArticlesCopy;
-
-    // if (language !== 'all') {
-    //   console.log('not all');
-
-    //   filteredArticleList = pureArticlesCopy.filter((article) => {
-    //     return article.language === language && article.topic === topic;
-    //   });
-    //   this.setState({ filteredArticleList });
-    // }
-
-    // if (language === 'all') {
-    //   console.log('language all');
-    //   filteredArticleList = pureArticlesCopy.filter((article) => {
-    //     return article.topic === topic;
-    //   });
-    //   this.setState({ filteredArticleList });
-    // }
-
-    // if (topics === 'all') {
-    //   console.log('topics all');
-    //   filteredArticleList = pureArticlesCopy.filter((article) => {
-    //     return article.language === language;
-    //   });
-    //   this.setState({ filteredArticleList });
-    // }
   }
 
   onLanguageChange = (event) => {
@@ -121,18 +93,24 @@ export default class Articles extends Component {
     return (
       <div>
         <h1 className="mainHeading">DevDisquisitions</h1>
-        <GenericSelect
-          changeAction={this.onLanguageChange}
-          data={languages}
-        />
-        <GenericSelect
-          changeAction={this.onTopicChange}
-          data={topics}
-        />
-        <div>
-          <Link to={`/createNew`}><button>CreateNew</button></Link>
+        <div className="articles-display">
+          <div className="both-drop-down-menu">
+            <GenericSelect
+              changeAction={this.onLanguageChange}
+              data={languages}
+            />
+            <GenericSelect
+              changeAction={this.onTopicChange}
+              data={topics}
+            />
+            <div>
+              <Link to={`/createNew`}><button>CreateNew</button></Link>
+            </div>
+          </div>
+          <div className="article-list-section">
+            {filteredArticleList}
+          </div>
         </div>
-        {filteredArticleList}
       </div>
     )
   }
