@@ -21,12 +21,16 @@ p {
 }
 .main-box {
   margin: 0;
-  height: 150px; 
+  height: 200px; 
   letter-spacing: 4px; 
   border-bottom: 3px solid black; 
-
+  background-image: url("./succulent2.png");
+  background-repeat: no-repeat;
+  background-position: 140vh;
+  background-size: 400px;
 }
 .articles-display {
+  border-top: 3px dotted green;
   display: flex;
   flex-direction: row;
 }
@@ -41,7 +45,7 @@ p {
 }
 .displaySelection, .create-new-button {
   width: 300px; 
-  background-color: #6f6d77;
+  background-image: linear-gradient(to right, teal , green);  
   margin: 30px; 
   height: 30px; 
   font-size: 16px;
