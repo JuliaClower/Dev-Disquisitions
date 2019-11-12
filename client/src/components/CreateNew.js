@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 
 export default class CreateNew extends Component {
@@ -53,7 +55,7 @@ export default class CreateNew extends Component {
                         </div>
                         <div>
 													<p className="form-p">Select the Programming Language:</p>
-                            <select name="language" value={this.state.newArticle.language} onChange={this.handleNewArticleChange}>
+                            <select className="createDisplaySelection" name="language" value={this.state.newArticle.language} onChange={this.handleNewArticleChange}>
                                     <option value="all">All</option>
                                     <option value="java">JAVA</option>
                                     <option value="javascript">Javascript</option>
@@ -66,7 +68,7 @@ export default class CreateNew extends Component {
                         </div>
                         <div>
 													<p className="form-p">Select the Programming Topic:</p>
-                            <select name="topic" value={this.state.newArticle.topic} onChange={this.handleNewArticleChange}>
+                            <select className="createDisplaySelection" name="topic" value={this.state.newArticle.topic} onChange={this.handleNewArticleChange}>
                                 <option value="basics">Basics</option>
                                 <option value="loops">Loops</option>
                                 <option value="classesobjects">Classes/Objects</option>
@@ -77,7 +79,7 @@ export default class CreateNew extends Component {
                         <div>
 													<p className="form-p">What was useful about this article?</p>
 														<textarea 
-															rows="4" 
+															rows="5" 
 															cols="60" 
 															name="description" 
 															type="text"
@@ -87,10 +89,12 @@ export default class CreateNew extends Component {
    													/>
                         </div>
                         <div>
-                            <input
+                            <input className="createDisplaySelection" 
                                 type="submit"
                                 value="Create New Article"
                             />
+														<br/><br/>
+														<Link to={`/`}><button className="createDisplaySelection" >BackHome</button></Link>
                         </div>
                     </form>
                 </div>
