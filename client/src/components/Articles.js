@@ -85,7 +85,7 @@ export default class Articles extends Component {
   render() {
     const filteredArticleList = this.state.filteredArticleList.map((article) => {
       const style = {
-        backgroundColor: 'yellow'
+        backgroundColor: 'teal'
       }
       return (
         <div className="individual-article-in-the-list" key={article._id} style={style}>
