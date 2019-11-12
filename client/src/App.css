@@ -23,14 +23,20 @@ p {
   margin: 0;
   height: 200px; 
   letter-spacing: 4px; 
-  border-bottom: 3px solid black; 
+  border-bottom: 4px solid black; 
   background-image: url("./vippng.com-small-plant-png-234720.png");
   background-repeat: no-repeat;
   background-size: 100px;
   background-position: 80vw;
 }
+.main-create-box {
+  border-bottom: 4px solid black; 
+  height: 75px; 
+  line-height: 75px;
+}
 .articles-display {
-  border-top: 3px solid teal;
+  padding-top: 30px;
+  border-top: 4px solid teal;
   display: flex;
   flex-direction: row;
 }
@@ -43,7 +49,7 @@ p {
   display: flex;
   flex-direction: column;
 }
-.displaySelection, .create-new-button {
+.displaySelection {
   width: 300px; 
   background-image: linear-gradient(to right, teal , black);  
   margin: 30px; 
@@ -53,11 +59,44 @@ p {
   font-weight: bold;
   color: white; 
 }
+.create-new-button {
+  width: 50px; 
+  background-image: linear-gradient(to right, teal , black);  
+  margin: 30px; 
+  height: 50px; 
+  font-size: 30px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
+  color: white; 
+  border-radius: 4px;
+}
 .individual-article-in-the-list { 
   height: 200px; 
   width: 200px; 
   border: 3px solid black;
   margin: 20px;
   border-radius: 4%;
+}
+.create-new-form-div {
+  margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  bottom: 0; 
+  right: 0;
+  border: 3px solid gray;
+  border-radius: 4%;
+  width: 400px; 
+  height: 600px;
+}
+input, select {
+  width: 380px; 
+  height: 20px;
+}
+.form-p {
+  font-size: 16px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
+  line-height: 40px;
 }
 

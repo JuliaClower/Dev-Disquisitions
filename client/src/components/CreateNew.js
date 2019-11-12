@@ -28,10 +28,11 @@ export default class CreateNew extends Component {
     render() {
         return (
             <div>
-                <h1>Create A New Article</h1>
-                <div>
+                <h1 className="main-create-box">Create A New Article</h1>
+                <div className="create-new-form-div">
                     <form onSubmit={this.handleSubmit}>
                         <div>
+												<p className="form-p">Name of Article:</p>
                             <input
                                 name="name"
                                 type="text"
@@ -41,6 +42,7 @@ export default class CreateNew extends Component {
                             />
                         </div>
                         <div>
+													<p className="form-p">Article URL:</p>
                             <input
                                 name="link"
                                 type="url"
@@ -50,6 +52,7 @@ export default class CreateNew extends Component {
                             />
                         </div>
                         <div>
+													<p className="form-p">Select the Programming Language:</p>
                             <select name="language" value={this.state.newArticle.language} onChange={this.handleNewArticleChange}>
                                     <option value="all">All</option>
                                     <option value="java">JAVA</option>
@@ -62,6 +65,7 @@ export default class CreateNew extends Component {
                             </select>
                         </div>
                         <div>
+													<p className="form-p">Select the Programming Topic:</p>
                             <select name="topic" value={this.state.newArticle.topic} onChange={this.handleNewArticleChange}>
                                 <option value="basics">Basics</option>
                                 <option value="loops">Loops</option>
@@ -71,13 +75,16 @@ export default class CreateNew extends Component {
                             </select>
                         </div>
                         <div>
-                            <input
-                                name="description"
-                                type="text"
-                                placeholder="Describe why this was helpful"
-                                value={this.state.newArticle.description}
-                                onChange={this.handleNewArticleChange}
-                            />
+													<p className="form-p">What was useful about this article?</p>
+														<textarea 
+															rows="4" 
+															cols="60" 
+															name="description" 
+															type="text"
+                            	placeholder="Describe why this was helpful"
+                            	value={this.state.newArticle.description}
+                              onChange={this.handleNewArticleChange}
+   													/>
                         </div>
                         <div>
                             <input

@@ -111,7 +111,7 @@ export default class Articles extends Component {
               data={topics}
             />
             <div>
-              <Link to={`/createNew`}><button className="create-new-button"></button></Link>
+              <Link to={`/createNew`}><button className="create-new-button">+</button></Link>
             </div>
           </div>
           <div className="article-list-section">
