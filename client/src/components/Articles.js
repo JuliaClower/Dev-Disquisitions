@@ -8,8 +8,8 @@ import GenericSelect from './GenericSelect';
 
 export default class Articles extends Component {
   state = {
-    topic: '',
-    language: '',
+    topic: 'all',
+    language: 'all',
     pureArticleList: [],
     filteredArticleList: [],
   };
@@ -30,46 +30,87 @@ export default class Articles extends Component {
   }
 
   filterByLanguageAndTopic = (language, topic) => {
-    const pureArticlesCopy = [...this.state.pureArticleList];
+    const { pureArticleList } = this.state;
+    let filteredArticleList = [];
 
-    if (language !== 'all' ) {
-      const filteredArticleList = pureArticlesCopy.filter((article) => {
-      return article.language === language && article.topic === topic;
-    });
-    this.setState({ filteredArticleList });
-  }
-    if (language === 'all') {
-      const filteredArticleList = pureArticlesCopy.filter((article) => {
+    if (language == 'all' && topic == 'all') {
+      console.log('all');
+      this.setState({ filteredArticleList: pureArticleList });
+      return;
+    }
+
+    if (language == 'all') {
+      console.log('language');
+      filteredArticleList = pureArticleList.filter((article) => {
         return article.topic === topic;
       });
       this.setState({ filteredArticleList });
+      return;
     }
 
-    if (topics === 'all') {
-      const filteredArticleList = pureArticlesCopy.filter((article) => {
+    if (topic == 'all') {
+      console.log('topic');
+      filteredArticleList = pureArticleList.filter((article) => {
         return article.language === language;
       });
       this.setState({ filteredArticleList });
+      return;
     }
+
+    console.log('everything else');
+    filteredArticleList = pureArticleList.filter(article => article.language == language && article.topic == topic);
+    console.log('list', filteredArticleList);
+
+    this.setState({ filteredArticleList });
+
+
+    // const pureArticlesCopy = [...this.state.pureArticleList];
+    // let filteredArticleList = pureArticlesCopy;
+
+    // if (language !== 'all') {
+    //   console.log('not all');
+
+    //   filteredArticleList = pureArticlesCopy.filter((article) => {
+    //     return article.language === language && article.topic === topic;
+    //   });
+    //   this.setState({ filteredArticleList });
+    // }
+
+    // if (language === 'all') {
+    //   console.log('language all');
+    //   filteredArticleList = pureArticlesCopy.filter((article) => {
+    //     return article.topic === topic;
+    //   });
+    //   this.setState({ filteredArticleList });
+    // }
+
+    // if (topics === 'all') {
+    //   console.log('topics all');
+    //   filteredArticleList = pureArticlesCopy.filter((article) => {
+    //     return article.language === language;
+    //   });
+    //   this.setState({ filteredArticleList });
+    // }
   }
 
   onLanguageChange = (event) => {
-    const newLanguage = event.target.value;
+    const language = event.target.value;
+    this.setState({ language });
     const { topic } = this.state;
 
-    this.filterByLanguageAndTopic(newLanguage, topic);
+    this.filterByLanguageAndTopic(language, topic);
   }
 
   onTopicChange = (event) => {
-    const newTopic = event.target.value;
+    const topic = event.target.value;
+    this.setState({ topic: topic });
     // const { language } = this.state; these mean the same thing
     const language = this.state.language;
 
-    this.filterByLanguageAndTopic(language, newTopic);
+    this.filterByLanguageAndTopic(language, topic);
   }
 
   render() {
-    console.log('topics', topics);
     const filteredArticleList = this.state.filteredArticleList.map((article) => {
       return (
         <div key={article._id}>
@@ -92,8 +133,6 @@ export default class Articles extends Component {
           <Link to={`/createNew`}><button>CreateNew</button></Link>
         </div>
         {filteredArticleList}
-        {console.log('filteredArticleList', filteredArticleList)}
-
       </div>
     )
   }

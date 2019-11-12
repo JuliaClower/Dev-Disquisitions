@@ -2,27 +2,32 @@ const topics = [
     {
         id: '0',
         displayName: "All",
-        value: 'all'
+        value: 'all',
     },
     {
         id: '1',
-        displayName: 'Basics'
+        displayName: 'Basics',
+        value: 'basics',
     },
     {
         id: '2',
-        displayName: 'Loops'
+        displayName: 'Loops',
+        value: 'loops',
     },
     {
         id: '3',
-        displayName: 'Classes/Objects'
+        displayName: 'Classes/Objects',
+        value: 'classesobjects'
     },
     {
         id: '4',
-        displayName: 'Arrays'
+        displayName: 'Arrays',
+        value: 'arrays',
     },
     {
         id: '5',
-        displayName: 'Functions'
+        displayName: 'Functions',
+        value: 'functions',
     },
 ]
 

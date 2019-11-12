@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
 class GenericSelect extends Component {
-
-
-
     render() {
-        const selectItems = this.props.data.map(data => <option key={data.id} value={data.name}>{data.displayName}</option>)
+        const selectItems = this.props.data.map(data => <option key={data.id} value={data.value}>{data.displayName}</option>)
         return (
             <select className="displaySelection" onChange={this.props.changeAction}>
                 {selectItems}

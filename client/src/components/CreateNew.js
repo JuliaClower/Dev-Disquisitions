@@ -52,22 +52,22 @@ export default class CreateNew extends Component {
                         <div>
                             <select name="language" value={this.state.newArticle.language} onChange={this.handleNewArticleChange}>
                                     <option value="all">All</option>
-                                    <option value="JAVA">JAVA</option>
+                                    <option value="java">JAVA</option>
                                     <option value="javascript">Javascript</option>
-                                    <option value="Python">Python</option>
-                                    <option value="C/CPP">C/CPP</option>
-                                    <option value="PHP">PHP</option>
-                                    <option value="C#">C#</option>
-                                    <option value="Ruby">Ruby</option>
+                                    <option value="python">Python</option>
+                                    <option value="ccpp">C/CPP</option>
+                                    <option value="php">PHP</option>
+                                    <option value="c#">C#</option>
+                                    <option value="ruby">Ruby</option>
                             </select>
                         </div>
                         <div>
                             <select name="topic" value={this.state.newArticle.topic} onChange={this.handleNewArticleChange}>
-                                <option value="Basics">Basics</option>
-                                <option value="Loops">Loops</option>
-                                <option value="Classes/Objects">Classes/Objects</option>
-                                <option value="Arrays">Arrays</option>
-                                <option value="Functions">Functions</option>
+                                <option value="basics">Basics</option>
+                                <option value="loops">Loops</option>
+                                <option value="classesobjects">Classes/Objects</option>
+                                <option value="arrays">Arrays</option>
+                                <option value="functions">Functions</option>
                             </select>
                         </div>
                         <div>

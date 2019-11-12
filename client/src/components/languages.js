@@ -12,7 +12,7 @@ const languages = [
     {
         id: '3',
         displayName: "JavaScript",
-        value: 'Javascript'
+        value: 'javascript'
     },
     {
         id: '4',
@@ -22,7 +22,7 @@ const languages = [
     {
         id: '5',
         displayName: "C/CPP",
-        value: 'c/cpp'
+        value: 'ccpp'
     },
     {
         id: '6',
