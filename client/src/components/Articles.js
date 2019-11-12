@@ -85,7 +85,7 @@ export default class Articles extends Component {
   render() {
     const filteredArticleList = this.state.filteredArticleList.map((article) => {
       return (
-        <div key={article._id}>
+        <div className="individual-article-in-the-list" key={article._id}>
           <Link to={`/article/${article._id}`}><h2>{article.name}</h2></Link>
         </div>
       )
@@ -104,7 +104,7 @@ export default class Articles extends Component {
               data={topics}
             />
             <div>
-              <Link to={`/createNew`}><button>CreateNew</button></Link>
+              <Link to={`/createNew`}><button className="create-new-button">CreateNew</button></Link>
             </div>
           </div>
           <div className="article-list-section">
