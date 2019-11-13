@@ -1,31 +1,22 @@
-# mern-template-project
+# Dev Disquisitions
+### Readme
 
-# Setup A New Project From This Template
+#### Overview
+Dev Disquisitons is intended to be used by individuals who are learning to code, or those who want to share their educational resources. Often in the process of trying to understand difficult concepts, I have found comments in Reddit posts or obscure articles to be the most helpful. I wanted to develop a place where that information can be stored and shared with others. This website is intended to be educational and instructive, while reducing the amount of time that users would otherwise spend googling articles on a specific topic. 
 
-If you are starting a new project do the following:
+#### Project Links
+* [Deployed Application](https://dev-disquisitions.herokuapp.com/)
+* [Trello Board](https://trello.com/b/AYzosc05/devdisquisitions)
 
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `npm run dev`
-1. Open a new browser window and navigate to the URL http://localhost:3000/
-    here you should see `hello world` displayed after page load
-    updates should show up here automatically
-1. see the `client/src` `readme.md` file for more information on the react project
+#### Technical Specifications
+* Built with React, Axios, MongoDB, and Mongoose
+* Uses JS, HTML, and CSS
+* Had one model with specific schema's to intake the user data
+* RESTful API
+* Combines two front-end API's for the user to sort through data
+* Deployed via Heroku
 
-# Setup A New Project Without This Template
-
-If you want to start a project without using this template directory do the
-following:
-
-
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
+#### Wireframe and ERD
+![alt-text](public/wireframe1.jpg "Wireframe Main Page")
+![alt-text](public/wireframe2.jpg "Wireframe Sub-Pages")
+![alt-text](public/ERD.jpg "ERD")
