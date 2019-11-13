@@ -119,6 +119,7 @@ input, select {
   font-weight: bold;
   line-height: 60px;
   padding-left: 10px; 
+  text-align: left;
 }
 .createDisplaySelection {
   background-image: linear-gradient(to right, rgb(130, 184, 168) , rgb(79, 179, 179));  
@@ -140,6 +141,13 @@ input, select {
   overflow-wrap: break-word;
 	word-wrap: break-word;
 }
+.description-in-single-article {
+  height: 250px; 
+}
+.links-to-article-on-single-page {
+  height: 100px; 
+}
+
 
 
 
