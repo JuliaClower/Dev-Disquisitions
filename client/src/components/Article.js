@@ -33,9 +33,11 @@ export default class Article extends Component {
                     <h2 className="form-p"> Language: {this.state.article.language}</h2>
                     <h2 className="form-p">Topic: {this.state.article.topic}</h2>
                     <div className="description-in-single-article">
-                    <p>{this.state.article.description}</p>
+                        <p>{this.state.article.description}</p>
                     </div>
-                    <p className="links-to-article-on-single-page">{this.state.article.link}</p>
+                    <div className="links-to-article-on-single-page">
+                        <a href={this.state.article.link} target="_blank">Click here to visit the article!</a>
+                    </div>
                     <button onClick={this.articleDeleteClick} className="createDisplaySelection">Delete</button>
                     <br /><br />
                     <Link to={`/`}><button className="createDisplaySelection">BackHome</button></Link>

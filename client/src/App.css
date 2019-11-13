@@ -143,7 +143,9 @@ input, select {
   height: 250px; 
 }
 .links-to-article-on-single-page {
-  height: 100px; 
+  height: 50px; 
+  margin: 20px; 
+  text-decoration: none;  
 }
 
 
