@@ -19,10 +19,14 @@ p {
 .welcome-line {
   line-height: 80px;
   margin-left: 400px;
+  margin: auto;
+  width: 160px;
 }
 .description-line-heading {
   line-height: 20px;
   text-align: center;
+  width: 60%;
+  margin: auto;
 }
 .main-box {
   margin: 0;
@@ -78,7 +82,8 @@ p {
 .individual-article-in-the-list { 
   height: 150px; 
   width: 400px; 
-  border: 3px solid black;
+  /* border: 3px solid black; */
+  box-shadow: 5px 8px 2px 1px rgb(91, 189, 189, 0.5);
   margin: 20px;
   border-radius: 10px;
 }
