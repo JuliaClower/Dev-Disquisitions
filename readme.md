@@ -17,5 +17,5 @@ Dev Disquisitons is intended to be used by individuals who are learning to code,
 * Deployed via Heroku
 
 #### Wireframe and ERD
-![alt-text](src/wireframe.jpg "Wireframe")
+![alt-text](./client/public/IMG_1110.jpg.jpg "Wireframe")
 ![alt-text](./client/public/IMG_8091.jpg "ERD") 
