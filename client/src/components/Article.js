@@ -35,7 +35,7 @@ export default class Article extends Component {
                     <div className="description-in-single-article">
                     <p>{this.state.article.description}</p>
                     </div>
-                    <p className="links-to-article-on-single-page">{this.state.article.url}</p>
+                    <p className="links-to-article-on-single-page">{this.state.article.link}</p>
                     <button onClick={this.articleDeleteClick} className="createDisplaySelection">Delete</button>
                     <br /><br />
                     <Link to={`/`}><button className="createDisplaySelection">BackHome</button></Link>
