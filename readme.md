@@ -18,4 +18,4 @@ Dev Disquisitons is intended to be used by individuals who are learning to code,
 
 #### Wireframe and ERD
 ![alt-text](src/wireframe.jpg "Wireframe")
-![alt-text](/src/ERD.jpg "ERD")
+![alt-text](/public/IMG_8091.jpg "ERD")
